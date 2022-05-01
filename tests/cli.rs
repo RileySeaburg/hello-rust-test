@@ -3,7 +3,7 @@ use assert_cmd::Command;
 fn runs() {
     let mut cmd = Command::cargo_bin("hello").unwrap();
 	// Assert success 
-    cmd.assert().success();
+    cmd.assert().success().stdout("Hello, world!\n");
 }
 
 
